@@ -141,7 +141,7 @@
             "[concat('Microsoft.Web/sites/', parameters('siteName'))]"
           ],
           "properties": {
-            "RepoUrl": "https://github.com/tpetkov87/AzMplc2",
+            "RepoUrl": "https://github.com/Sitefinity/azure-sample-app",
             "branch": "master",
             "IsManualIntegration": true
           }
