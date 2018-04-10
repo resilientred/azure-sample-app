@@ -156,8 +156,8 @@
             "[concat('Microsoft.Sql/servers/', parameters('sqlServerName'), '/databases/', parameters('databaseName'))]"
           ],
           "properties": {
-            "Sitefinity": {
-              "name": "Sitefinity",
+            "defaultConnection": {
+              "name": "defaultConnection",
               "value": "[concat('Data Source=tcp:', reference(concat('Microsoft.Sql/servers/', parameters('sqlServerName'))).fullyQualifiedDomainName, ',1433;Initial Catalog=', parameters('databaseName'), ';User Id=', parameters('administratorLogin'), '@', parameters('sqlServerName'), ';Password=', parameters('administratorLoginPassword'),';')]",
               "type": "SQLAzure"
             }
@@ -174,8 +174,8 @@
             "displayName": "AppKey"
           },
           "properties": {
-            "sf-env:ConnectionStringParams:Sitefinity": "Backend=azure"
-            
+            "sf-env:ConnectionStringParams:defaultConnection": "Backend=azure",
+            "sf-env:ConnectionStringName": "defaultConnection"          
           }
         }
       ]
